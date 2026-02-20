@@ -1,0 +1,6 @@
+When to use what ?
+
+Hidden → ReLU
+Binary → Sigmoid
+Multi-class → No Softmax
+Regression → No activation

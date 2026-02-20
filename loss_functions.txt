@@ -1,0 +1,45 @@
+Regression → MSELoss → No activation
+
+Binary → BCEWithLogitsLoss → No Sigmoid
+
+Multi-class → CrossEntropyLoss → No Softmax
+
+----------------------------------------------------
+
+🔴 1. MSELoss (Regression)
+✅ Use when:
+Output = continuous value
+
+Examples:
+price prediction
+temperature
+marks
+
+Formula (simple idea)
+(predicted − actual)²
+
+PyTorch Code
+
+loss_fn = nn.MSELoss()
+loss = loss_fn(predictions, targets)
+----------------------------------------------------
+
+🔴 2. CrossEntropyLoss (Multi-class)
+✅ Use when:
+Multiple classes (0,1,2,...)
+
+PyTorch Code
+
+loss_fn = nn.CrossEntropyLoss()
+loss = loss_fn(outputs, labels)
+----------------------------------------------------
+
+🔴 3. BCEWithLogitsLoss (Binary)
+✅ Use when:
+Binary classification (0 or 1)
+
+PyTorch Code
+
+loss_fn = nn.BCEWithLogitsLoss()
+loss = loss_fn(outputs, targets)
+----------------------------------------------------
